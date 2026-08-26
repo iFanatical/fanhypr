@@ -3,7 +3,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("xsettingsd")
     hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
     hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("$HOME/.local/bin/random-wallpaper.sh")
     hl.exec_cmd("hyprvibrance all 1.5")
 end)
 
