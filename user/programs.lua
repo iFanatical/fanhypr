@@ -1,0 +1,18 @@
+return {
+    terminal = "alacritty",
+    file_manager = "thunar",
+    browser = "brave-origin-nightly",
+    browser_alt = "firefox",
+    media_play_pause = "playerctl play-pause",
+    volume_down = "$HOME/.local/bin/volume-notif.sh --dec",
+    volume_up = "$HOME/.local/bin/volume-notif.sh --inc",
+    volume_mute = "$HOME/.local/bin/volume-notif.sh --toggle",
+    microphone_mute = "$HOME/.local/bin/volume-notif.sh --toggle-mic",
+    monitor_brightness_up = "$HOME/.local/bin/brightness.sh --ddcup",
+    monitor_brightness_down = "$HOME/.local/bin/brightness.sh --ddcdown",
+    brightness_up = "$HOME/.local/bin/brightness.sh --bcup",
+    brightness_down = "$HOME/.local/bin/brightness.sh --bcdown",
+    screenshot_region = "hyprshot --mode region --output $HOME/Pictures/screenshots",
+    screenshot_output = "hyprshot --mode output --output $HOME/Pictures/screenshots",
+    shell = "fanhypr-qs-shell",
+}
