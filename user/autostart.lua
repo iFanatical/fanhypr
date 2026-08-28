@@ -1,5 +1,5 @@
 hl.on("hyprland.start", function()
-    hl.exec_cmd("fanhypr-qs-shell")
+    hl.exec_cmd("fanhypr-qs-shell --no-duplicate")
     hl.exec_cmd("xsettingsd")
     hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
     hl.exec_cmd("awww-daemon")

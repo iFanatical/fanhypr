@@ -25,12 +25,12 @@ hl.window_rule({
 
 
 -- browsers
-hl.window_rule ({
-    name = "browsers",
-    match = { class = "^(firefox|zen|LibreWolf|[Gg]oogle-chrome|Thorium-browser|Vivaldi-stable|[Bb]rave-browser|[Cc]hromium|brave-origin-nightly)$" },
-    tag = "+browsers",
-    workspace = "1 silent",
-})
+--hl.window_rule ({
+--    name = "browsers",
+--    match = { class = "^(firefox|zen|LibreWolf|[Gg]oogle-chrome|Thorium-browser|Vivaldi-stable|[Bb]rave-browser|[Cc]hromium|brave-origin-nightly)$" },
+--    tag = "+browsers",
+--    workspace = "1 silent",
+--})
 
 
 -- drm

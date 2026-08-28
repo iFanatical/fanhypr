@@ -11,7 +11,7 @@ hl.config({
         special_fallthrough = true,
         follow_mouse = 1,
         accel_profile = "flat",
-        sensitivity = 0,
+        sensitivity = 0.0,
         touchpad = { natural_scroll = false },
     },
     binds = { workspace_back_and_forth = true },
@@ -19,3 +19,4 @@ hl.config({
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 hl.device({ name = "epic-mouse-v1", sensitivity = -0.5 })
+hl.device({ name = "asustek-rog-harpe-ace-aim-lab-edition", scroll_factor = 2.0, sensitivity = 0.0, accel_profile = flat })

@@ -28,9 +28,10 @@ end
 local shell = programs.shell .. " ipc call "
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(shell .. "launcher toggle"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(shell .. "runner toggle"))
-hl.bind(mod .. " + V", hl.dsp.exec_cmd(shell .. "vpn toggle"))
+hl.bind("ALT + V", hl.dsp.exec_cmd(shell .. "vpn toggle"))
 hl.bind("ALT + N", hl.dsp.exec_cmd(shell .. "notifications toggle-dnd"))
 hl.bind(mod .. " + W", hl.dsp.exec_cmd(shell .. "wallpaper toggle"))
+hl.bind(mod .. " + Semicolon", hl.dsp.exec_cmd(shell .. "emoji toggle"))
 
 hl.bind(mod .. " + SHIFT + code:20", hl.dsp.exec_cmd("alacritty-opacity --opacdown"))
 hl.bind(mod .. " + SHIFT + code:21", hl.dsp.exec_cmd("alacritty-opacity --opacup"))
@@ -51,16 +52,16 @@ hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mod .. " + ALT + B", hl.dsp.exec_cmd(programs.browser_alt))
-hl.bind(mod .. " + SHIFT + P", hl.dsp.exec_cmd("$HOME/.local/bin/fanhypr-qs-restart.sh"))
+hl.bind(mod .. " + SHIFT + P", hl.dsp.exec_cmd("fanhypr-qs-restart"))
 hl.bind(mod .. " + P", hl.dsp.exec_cmd("pavucontrol"))
 
 hl.bind("Print", hl.dsp.exec_cmd(programs.screenshot_region))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd(programs.screenshot_output))
 
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(programs.media_play_pause))
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd(programs.media_play_pause))
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(shell .. "media play-pause"))
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd(shell .. "media play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(shell .. "media next"))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(shell .. "media previous"))
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(programs.volume_up))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(programs.volume_down))
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd(programs.volume_mute))
