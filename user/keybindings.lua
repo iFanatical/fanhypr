@@ -28,7 +28,8 @@ end
 local shell = programs.shell .. " ipc call "
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(shell .. "launcher toggle"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(shell .. "runner toggle"))
-hl.bind("ALT + V", hl.dsp.exec_cmd(shell .. "vpn toggle"))
+hl.bind("ALT + V", hl.dsp.exec_cmd(shell .. "vpn tun1 toggle"))
+hl.bind("ALT + SHIFT + V", hl.dsp.exec_cmd(shell .. "vpn tun2 toggle"))
 hl.bind("ALT + N", hl.dsp.exec_cmd(shell .. "notifications toggle-dnd"))
 hl.bind(mod .. " + W", hl.dsp.exec_cmd(shell .. "wallpaper toggle"))
 hl.bind(mod .. " + Semicolon", hl.dsp.exec_cmd(shell .. "emoji toggle"))

@@ -47,11 +47,31 @@ hl.window_rule ({
     match = { tag = "drm"},
 })
 hl.window_rule ({
+    size = { 338, 701 },
+    match = { class = "^(steam)$", xwayland = true, title = "^(Friends List)$" },
+    tag = "+flt",
+    move = { 1550, 200 },
+})
+hl.window_rule ({
     match = { class = "^(steam)$", xwayland = true, title = "^(Steam Settings)$" },
     tag = "+flt",
     center = true,
 })
 
+-- games
+hl.window_rule ({
+    tag = "+games",
+    match = { class = "^(Terraria.bin.x86_64)$" },
+})
+hl.window_rule ({
+    tag = "+games",
+    match = { title = "^(Vortex)$" },
+})
+hl.window_rule ({
+    workspace = "5 silent",
+    match = { tag = "games"},
+    scroll_mouse = 1.0,
+})
 
 -- discord
 hl.window_rule ({
