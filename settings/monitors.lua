@@ -1,6 +1,19 @@
-hl.monitor({ output = "DP-2", mode = "1920x1080@100", position = "auto", scale = "1", cm = "auto" })
-hl.monitor({ output = "DP-1", mode = "1920x1080@100", position = "auto", scale = "1", cm = "auto" })
-hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "auto", scale = "1", cm = "auto" })
+local file = assert(io.open("/etc/hostname", "r"))
+local hostname = file:read("*l")
+file:close()
 
--- Fallback for any monitor not matched above.
-hl.monitor({ output = "", mode = "preferred", position = "auto", scale = "auto" })
+local module = "settings.monitors." .. hostname
+
+local ok, err = pcall(require, module)
+
+-- fallback, if hostname not recognized
+if not ok then
+    print("No monitor configuration found for hostname: " .. hostname)
+
+    hl.monitor({
+        output = "",
+        mode = "preferred",
+        position = "auto",
+        scale = "auto"
+    })
+end

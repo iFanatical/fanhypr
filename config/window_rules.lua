@@ -23,16 +23,6 @@ hl.window_rule({
     no_focus = true,
 })
 
-
--- browsers
---hl.window_rule ({
---    name = "browsers",
---    match = { class = "^(firefox|zen|LibreWolf|[Gg]oogle-chrome|Thorium-browser|Vivaldi-stable|[Bb]rave-browser|[Cc]hromium|brave-origin-nightly)$" },
---    tag = "+browsers",
---    workspace = "1 silent",
---})
-
-
 -- drm
 hl.window_rule ({
     tag = "+drm",
@@ -65,10 +55,30 @@ hl.window_rule ({
 })
 hl.window_rule ({
     tag = "+games",
-    match = { title = "^(Vortex)$" },
+    match = { class = "^(wow.exe)$" },
 })
 hl.window_rule ({
-    workspace = "5 silent",
+    tag = "+games",
+    match = { class = "^(steam_app_.*)$" },
+    fullscreen = 1,
+})
+hl.window_rule ({
+    match = { title = "^(The Elder Scrolls V: Skyrim Special Edition)$" },
+    float = 1,
+    fullscreen = 0,
+})
+hl.window_rule ({
+    match = { class = "^(steam_app_489830)$", title = "" },
+    float = 1,
+    fullscreen = 0,
+})
+hl.window_rule ({
+    tag = "+games",
+    match = { class = "^(steam_app_489830)$", title = "^(Vortex)$" },
+    fullscreen = 0,
+})
+hl.window_rule ({
+    workspace = "4 silent",
     match = { tag = "games"},
     scroll_mouse = 1.0,
 })
@@ -99,7 +109,6 @@ hl.window_rule ({
     tag = "+flt",
 })
 
-
 -- teamspeak
 hl.window_rule ({
     tag = "+teamspeak",
@@ -121,7 +130,6 @@ hl.window_rule ({
     workspace = "special:teamspeak silent",
     match = { tag = "teamspeak" },
 })
-
 
 -- floating
 hl.window_rule ({
@@ -168,7 +176,6 @@ hl.window_rule ({
     match = { tag = "flt" },
 })
 
-
 -- rdp
 hl.window_rule ({
     match = { class = "org.remmina.Remmina", title = "^(fanwin10)$|^(Winsor Laptop)$" },
@@ -206,7 +213,6 @@ hl.window_rule({
     workspace = "4 silent",
     match = { tag = "virt" },
 })
-
 
 -- fanos
 hl.window_rule ({
