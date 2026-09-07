@@ -2,7 +2,7 @@ local file = assert(io.open("/etc/hostname", "r"))
 local hostname = file:read("*l")
 file:close()
 
-local module = "settings.monitors." .. hostname
+local module = "settings/monitors/" .. hostname
 
 local ok, err = pcall(require, module)
 
