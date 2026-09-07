@@ -9,6 +9,8 @@ local ok, err = pcall(require, module)
 -- fallback, if hostname not recognized
 if not ok then
     print("No workspace configuration found for hostname: " .. hostname)
+    print(err)
+
     for workspace = 1, 10 do
 	hl.workspace_rule({
 	    workspace = workspace,
