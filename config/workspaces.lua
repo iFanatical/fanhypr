@@ -1,7 +1,18 @@
-for workspace = 1, 10 do
-    hl.workspace_rule({
-        workspace = workspace,
-        monitor = workspace <= 5 and "DP-2" or "DP-1",
-        default = workspace == 1,
-    })
+local file = assert(io.open("/etc/hostname", "r"))
+local hostname = file:read("*l")
+file:close()
+
+local module = "config/workspaces/" .. hostname
+
+local ok, err = pcall(require, module)
+
+-- fallback, if hostname not recognized
+if not ok then
+    print("No workspace configuration found for hostname: " .. hostname)
+    for workspace = 1, 10 do
+	hl.workspace_rule({
+	    workspace = workspace,
+	    default = workspace == 1,
+	})
+    end
 end
