@@ -19,10 +19,12 @@ hl.bind(mod .. " + SHIFT + H", hl.dsp.window.resize({ x = -10, y = 0, relative =
 hl.bind(mod .. " + SHIFT + J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
 hl.bind(mod .. " + SHIFT + K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
 
-for workspace = 1, 10 do
-    local key = workspace % 10
-    hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = workspace }))
-    hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = workspace, follow = false }))
+for key = 1, 5 do
+    hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = key }))
+    hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = key, follow = false }))
+
+    hl.bind("ALT + " .. key, hl.dsp.focus({ workspace = key + 5 }))
+    hl.bind("ALT + SHIFT + " .. key, hl.dsp.window.move({ workspace = key + 5, follow = false }))
 end
 
 local shell = programs.shell .. " ipc call "
