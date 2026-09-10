@@ -68,6 +68,11 @@ hl.window_rule ({
     fullscreen = 0,
 })
 hl.window_rule ({
+    tag = "+games",
+    match = { class = "^(Slay the Spire 2)$" },
+    fullscreen = 1,
+})
+hl.window_rule ({
     match = { class = "^(steam_app_489830)$", title = "" },
     float = 1,
     fullscreen = 0,
