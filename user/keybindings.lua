@@ -67,6 +67,9 @@ hl.bind(mod .. " + P", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind("Print", hl.dsp.exec_cmd(programs.screenshot_region))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd(programs.screenshot_output))
 
+hl.bind("CTRL + ALT + Tab", hl.dsp.exec_cmd(programs.screenshot_region))
+hl.bind("CTRL + SHIFT + ALT + Tab", hl.dsp.exec_cmd(programs.screenshot_output))
+
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(shell .. "media play-pause"))
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd(shell .. "media play-pause"))
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd(shell .. "media next"))

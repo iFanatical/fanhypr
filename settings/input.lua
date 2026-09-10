@@ -21,3 +21,4 @@ hl.config({
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 hl.device({ name = "epic-mouse-v1", sensitivity = -0.5 })
 hl.device({ name = "asustek-rog-harpe-ace-aim-lab-edition", scroll_factor = 2.0, sensitivity = -0.2, accel_profile = "adaptive" })
+hl.device({ name = "logitech-g-pro--1", scroll_factor = 2.0, sensitivity = -0.2, accel_profile = "adaptive" })
