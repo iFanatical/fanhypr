@@ -1,7 +1,7 @@
 return {
     terminal = "alacritty",
     file_manager = "thunar",
-    browser = "brave-origin-nightly",
+    browser = "gtk-launch $(xdg-settings get default-web-browser)",
     browser_alt = "firefox",
     media_play_pause = "playerctl play-pause",
     volume_down = "fanhypr-qs-shell ipc call audio volume-down",
