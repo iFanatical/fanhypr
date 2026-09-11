@@ -4,22 +4,13 @@
 local suppressMaximizeRule = hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },
-
     suppress_event = "maximize",
 })
 -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
     name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-
+    match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false, },
     no_focus = true,
 })
 
@@ -128,7 +119,7 @@ hl.window_rule ({
     match = { tag = "teamspeak"},
 })
 hl.window_rule ({
-    size = {1084, 636},
+    size = { 1084, 636 },
     match = { tag = "teamspeak"},
 })
 hl.window_rule ({ 
@@ -141,12 +132,23 @@ hl.window_rule ({
     name = "file-choosers",
     match = { class = "^(xdg-desktop-portal-gtk)$" },
     tag = "+flt",
-    size = {1084, 636},
+    size = { 1084, 636 },
     center = 1,
 })
 hl.window_rule ({
     name = "file-operations",
     match = { class = "^([Tt]hunar)$", title = "Rename.*" },
+    tag = "+flt",
+})
+hl.window_rule ({
+    name = "bitwarden",
+    match = { class = "^(brave-.*)$", title = "_crx_.*" },
+    size = { 520, 720 },
+    tag = "+flt",
+})
+hl.window_rule ({
+    match = { initial_class = "brave-origin-nightly", initial_title = "Untitled - Brave Origin" },
+    size = { 570, 720 },
     tag = "+flt",
 })
 hl.window_rule ({
@@ -172,7 +174,7 @@ hl.window_rule ({
     tag = "+flt",
 })
 hl.window_rule ({
-    size = { 886, 738},
+    size = { 886, 738 },
     match = {class = "^(org.kde.plasma-systemmonitor)$" },
     tag = "+flt",
 })
@@ -194,7 +196,6 @@ hl.window_rule ({
     match = { tag = "rdp" },
     workspace = "5 silent",
 })
-
 
 -- virtualization
 hl.window_rule({
@@ -251,7 +252,6 @@ hl.window_rule ({
     match = { class = "^(fanos-config)$" },
     center = 1,
 })
-
 hl.layer_rule({
     match = { namespace = "fanhypr-qs-notifications" },
     blur = true,

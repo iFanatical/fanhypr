@@ -28,6 +28,7 @@ for key = 1, 5 do
 end
 
 local shell = programs.shell .. " ipc call "
+hl.bind(mod .. " + ALT + Space", hl.dsp.exec_cmd(shell .. "menu toggle"))
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(shell .. "launcher toggle"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(shell .. "runner toggle"))
 hl.bind("ALT + V", hl.dsp.exec_cmd(shell .. "vpn tun1 toggle"))
