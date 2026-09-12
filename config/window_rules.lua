@@ -127,6 +127,28 @@ hl.window_rule ({
     match = { tag = "teamspeak" },
 })
 
+-- gsr
+hl.window_rule ({
+    tag = "+gsr",
+    match = { class = "^(com.dec05eba.gpu_screen_recorder)$" },
+})
+hl.window_rule ({
+    opacity = "1.0 override",
+    match = { tag = "gsr"},
+})
+hl.window_rule ({
+    tag = "+flt",
+    match = { tag = "gsr"},
+})
+hl.window_rule ({
+    size = { 636, 1084 },
+    match = { tag = "gsr"},
+})
+hl.window_rule ({ 
+    workspace = "special:gsr silent",
+    match = { tag = "gsr" },
+})
+
 -- floating
 hl.window_rule ({
     name = "file-choosers",

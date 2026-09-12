@@ -11,8 +11,12 @@ hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", a
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mod .. " + J", hl.dsp.layout("cyclenext"))
 hl.bind(mod .. " + K", hl.dsp.layout("cycleprev"))
+hl.bind(mod .. " + SHIFT + J", hl.dsp.window.swap({ next = true }))
+hl.bind(mod .. " + SHIFT + K", hl.dsp.window.swap({ prev = true }))
 hl.bind(mod .. " + COMMA", hl.dsp.focus({ monitor = "-1" }))
 hl.bind(mod .. " + PERIOD", hl.dsp.focus({ monitor = "+1" }))
+hl.bind(mod .. " + SHIFT + COMMA", hl.dsp.window.move({ monitor = "-1", follow = false }))
+hl.bind(mod .. " + SHIFT + PERIOD", hl.dsp.window.move({ monitor = "+1", follow = false }))
 
 hl.bind(mod .. " + SHIFT + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
 hl.bind(mod .. " + SHIFT + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
