@@ -1,15 +1,15 @@
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "Adwaita")
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("SCRIPTS", "$HOME/.local/bin")
-hl.env("LANG", "en_US.UTF-8")
-hl.env("LC_ALL", "en_US.UTF-8")
-hl.env("GTK_THEME", "Tokyo-Night")
-hl.env("TERMINAL", "alacritty")
-hl.env("GDK_SCALE", "1")
-hl.env("QT_SCALE_FACTOR", "1")
-hl.env("FANHYPR_QS_WALLPAPER_TRANSITION", "wipe")
-hl.env("FANHYPR_QS_UPS_HOST", "10.1.0.10")
-hl.env("FANHYPR_QS_UPS_COMMUNITY", "public")
-hl.env("FANHYPR_TUN_COUNT", "1")
+require("config/environment/default")
+
+local file = assert(io.open("/etc/hostname", "r"))
+local hostname = file:read("*l")
+file:close()
+
+local module = "config/environment/" .. hostname
+
+local ok, err = pcall(require, module)
+
+-- fallback, if hostname not recognized
+if not ok then
+    print("No environment configuration found for hostname: " .. hostname)
+    print(err)
+end
