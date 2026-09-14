@@ -5,6 +5,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("hyprvibrance all 1.5")
     hl.exec_cmd("gsr-ui launch-daemon")
+    hl.exec_cmd("hyprsunset")
 end)
 
 local function restore_vibrance()
