@@ -52,7 +52,7 @@ hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-hl.bind(mod .. " + T", hl.dsp.workspace.toggle_special({ "tokyo_music" }))
+hl.bind(mod .. " + T", hl.dsp.workspace.toggle_special( "tokyo_music" ))
 hl.bind(mod .. " + SHIFT + T", hl.dsp.window.move({ workspace = "special:tokyo_music", follow = false }))
 
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(programs.browser))
