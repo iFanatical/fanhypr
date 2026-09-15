@@ -192,7 +192,7 @@ hl.window_rule ({
     tag = "+flt",
 })
 hl.window_rule ({
-    size = { 1084, 636 },
+    size = { 1458, 897 },
     match = { initial_class = "^(brave-jellyfin.bush.home.arpa__-Default)$", initial_title = "^(jellyfin.bush.home.arpa_/)$" },
     tag = "+flt",
 })
