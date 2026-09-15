@@ -249,12 +249,12 @@ hl.window_rule({
 
 -- fanos & custom apps
 hl.window_rule ({
-    tag = "+tokyo-music",
+    tag = "+tokyomusic",
     match = { initial_class = "^(brave-jellyfin.bush.home.arpa__-Default)$", initial_title = "^(jellyfin.bush.home.arpa_/)$" },
 })
 hl.window_rule({
-    workspace = "special:tokyo-music",
-    match = { tag = "tokyo-music" },
+    workspace = "special:tokyo_music",
+    match = { tag = "tokyomusic" },
 })
 hl.window_rule ({
     tag = "+fanos",
