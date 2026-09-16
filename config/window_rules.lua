@@ -193,7 +193,7 @@ hl.window_rule ({
 })
 hl.window_rule ({
     size = { 1458, 897 },
-    match = { initial_class = "^(brave-jellyfin.bush.home.arpa__-Default)$", initial_title = "^(jellyfin.bush.home.arpa_/)$" },
+    match = { initial_class = "^(brave-fanatical.privatedns.org__-Default)$", initial_title = "^(fanatical.privatedns.org_/)$" },
     tag = "+flt",
 })
 hl.window_rule ({
@@ -250,7 +250,7 @@ hl.window_rule({
 -- tokyo music
 hl.window_rule ({
     tag = "+tokyomusic",
-    match = { initial_class = "^(brave-jellyfin.bush.home.arpa__-Default)$" },
+    match = { initial_class = "^(brave-fanatical.privatedns.org__-Default)$" },
 })
 hl.window_rule({
     workspace = "special:tokyo_music",
