@@ -53,7 +53,7 @@ hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.bind(mod .. " + T", function()
-    hl.dispatch(hl.dsp.exec_cmd([[ hyprctl clients -j | jq -e 'any(.[]; any(.tags[]?; . == "tokyomusic*"))' >/dev/null || fanos-launch-webapp 'http://jellyfin.bush.home.arpa:8097/#/home' ]]))
+    hl.dispatch(hl.dsp.exec_cmd([[ hyprctl clients -j | jq -e 'any(.[]; any(.tags[]?; . == "tokyomusic*"))' >/dev/null || fanos-launch-webapp 'https://fanatical.privatedns.org:444' ]]))
     hl.dispatch(hl.dsp.workspace.toggle_special("tokyo_music"))
 end)
 hl.bind(mod .. " + SHIFT + T", hl.dsp.window.move({ workspace = "special:tokyo_music", follow = false }))
