@@ -60,6 +60,15 @@ hl.window_rule ({
 })
 hl.window_rule ({
     tag = "+games",
+    match = { class = "^(org.prismlauncher.PrismLauncher)$" },
+})
+hl.window_rule ({
+    tag = "+games",
+    match = { class = "^Minecraft.*$" },
+    fullscreen = 1,
+})
+hl.window_rule ({
+    tag = "+games",
     match = { class = "^(Slay the Spire 2)$" },
     fullscreen = 1,
 })
